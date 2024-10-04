@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Flashcard Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="name-container">
+      <h1>Enter Player Name</h1>
+      <input type="text" id="player-name" placeholder="Your Name" />
+      <button id="start-btn" onclick="start()">Start Quiz</button>
+    </div>
+
+    <div id="question-input" style="display: none">
+      <h2>Create Quiz Questions</h2>
+      <input type="text" id="new-question" placeholder="Enter Question" />
+      <input type="text" id="option1" placeholder="Option 1" />
+      <input type="text" id="option2" placeholder="Option 2" />
+      <input type="text" id="option3" placeholder="Option 3" />
+      <input type="text" id="option4" placeholder="Option 4" />
+      <input
+        type="text"
+        id="correct-answer"
+        placeholder="Correct Option Number"
+      />
+      <button onclick="addQuestion()">Add Question</button>
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" style="display: none">
+      <h2 id="quiz-question"></h2>
+      <div id="options"></div>
+      <p id="quiz-feedback"></p>
+      <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <div id="quiz-end" style="display: none">
+      <h2>Quiz Finished!</h2>
+      <p id="final-score"></p>
+      <button class="neon-btn" onclick="tryAgain()">Try Again</button>
+      <button class="neon-btn" onclick="exitQuiz()">Exit</button>
+      <button class="neon-btn" onclick="newQuiz()">New Quiz</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

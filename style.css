@@ -1,0 +1,115 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(270deg, rgba(10, 10, 50, 1), rgba(10, 10, 25, 1));
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: gradientChange 10s infinite alternate;
+}
+
+#name-container,
+#question-input,
+#quiz-container,
+#quiz-end {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(70%);
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+h1,
+h2,
+p {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+input,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#start-btn {
+  background-color: rgba(0, 200, 255, 0.8);
+  border: none;
+}
+
+.neon-btn {
+  background-color: rgba(0, 150, 255, 0.8);
+  border: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 150, 255, 1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.neon-btn:hover {
+  background-color: rgba(0, 200, 255, 1);
+  box-shadow: 0 0 10px rgba(0, 150, 255, 1);
+}
+
+button.option-btn {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.correct {
+  border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.wrong {
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  animation: gradientChange 10s infinite alternate;
+}
+
+@keyframes gradientChange {
+  from {
+    background: linear-gradient(
+      270deg,
+      rgba(10, 10, 50, 1),
+      rgba(10, 10, 25, 1)
+    );
+  }
+  to {
+    background: linear-gradient(
+      270deg,
+      rgba(25, 10, 50, 1),
+      rgba(50, 10, 25, 1)
+    );
+  }
+}
